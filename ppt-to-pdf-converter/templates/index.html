@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT to PDF Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>PPT to PDF Converter</h1>
+        
+        <div class="upload-box" id="dropZone">
+            <input type="file" id="fileInput" accept=".ppt,.pptx">
+            <div class="upload-content">
+                <span class="material-icons">upload</span>
+                <p>Drag and drop PPT file or click to upload</p>
+            </div>
+        </div>
+
+        <div class="status-box" id="statusBox">
+            <div class="loader"></div>
+            <p id="statusText"></p>
+        </div>
+
+        <a id="downloadBtn" class="download-btn hidden">
+            Download PDF
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
